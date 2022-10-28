@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,400;0,700;1,200;1,300&display=swap');
+//Other font : Montserrat
+
+$navbar-height: 90px;
+$c-1: #133c55;
+$c-2: #5fbb97;
+$c-2-transparent: #5fbb9879;
+$c-3: #fed766;
+$c-4: #f6743c;
+$c-5: #d85531;
+
+body {
+  box-sizing: border-box;
+  background-color: rgb(88, 88, 88);
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  border-bottom: 1rem solid black;
+
+  .navbar {
+    background-color: #fbfbfb;
+    box-shadow: 0 2px 10px #0000001a;
+
+    height: $navbar-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      img {
+        width: $navbar-height;
+        height: $navbar-height;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+
+      padding-right: 10px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        padding: 0.5rem;
+        margin-left: 5px;
+        border: 1px solid black;
+        border-radius: 10%;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 75vh;
+
+    .background {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      z-index: -1;
+    }
+
+    h1 {
+      align-self: flex-start;
+      margin-top: 5rem;
+      font-size: 5rem;
+      font-weight: bold;
+      text-decoration: underline;
+      color: #fbfbfb;
+      text-shadow: 1px 1px 2px black;
+    }
+  }
+}
+
+main {
+  section {
+    background: rgb(246, 116, 60);
+    background: linear-gradient(45deg, rgba(246, 116, 60, 0.835171568627451) 0%, rgba(254, 215, 102, 1) 100%);
+
+    border-bottom: 1rem solid black;
+
+    article {
+      display: flex;
+      flex-direction: column;
+
+      padding-top: 2rem;
+
+      img {
+        width: 100vw;
+        height: auto;
+      }
+
+      .content-right {
+        align-self: flex-end;
+        text-align: end;
+
+        h2 {
+          font-size: 2rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .content {
+        h2 {
+          font-size: 2rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .content-presentation {
+        margin-top: 2rem;
+        border-top: 1px solid black;
+
+        h2 {
+          font-size: 2rem;
+          font-weight: 600;
+          padding: 2rem 0 1rem 0;
+        }
+
+        span {
+          margin-top: 2rem;
+          font-style: italic;
+        }
+
+        p {
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $c-1;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 2rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      span {
+        background-color: $c-2;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 15px;
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        margin: 0.5rem 0;
+      }
+    }
+
+    p {
+      margin: 2rem 0 1rem 0;
+    }
+  }
+}
+
+.util-mx {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+//Test
+.card {
+  position: absolute;
+  width: 80vw;
+  height: 350px;
+
+  &--image {
+    height: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    margin-top: 100px;
+    img {
+      height: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &--info {
+    --size: 20px;
+    width: var(--size);
+    height: var(--size);
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+    position: absolute;
+    transition: width 550ms ease, height 550ms ease, right 550ms ease, background 550ms ease;
+    overflow: hidden;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014), 0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.025),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.03), 0 41.8px 33.4px rgba(0, 0, 0, 0.036), 0 100px 80px rgba(0, 0, 0, 0.05), 0 0px 2.2px rgba(0, 0, 0, 0.045),
+      0 0px 5.3px rgba(0, 0, 0, 0.065), 0 0px 10px rgba(0, 0, 0, 0.08), 0 0px 17.9px rgba(0, 0, 0, 0.095), 0 0px 33.4px rgba(0, 0, 0, 0.115),
+      0 0px 80px rgba(0, 0, 0, 0.16), 0 0.2px 2.2px rgba(0, 0, 0, 0.014), 0 0.6px 5.3px rgba(0, 0, 0, 0.02), 0 1.1px 10px rgba(0, 0, 0, 0.025),
+      0 2px 17.9px rgba(0, 0, 0, 0.03), 0 3.8px 33.4px rgba(0, 0, 0, 0.036), 0 9px 80px rgba(0, 0, 0, 0.05);
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.25) 50%, transparent 100%);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 550ms ease;
+    }
+
+    &.info--1 {
+      bottom: 43%;
+      right: 20%;
+      .info--image {
+        img {
+          top: -30%;
+          left: -160%;
+        }
+      }
+    }
+
+    &.info--2 {
+      bottom: -10%;
+      right: 65%;
+      .info--image {
+        img {
+          right: -40%;
+          bottom: -120%;
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .info--text {
+      display: block;
+      position: absolute;
+      left: 10%;
+      bottom: 5%;
+      font-size: 0.55rem;
+      letter-spacing: 1px;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(25%);
+      transition: opacity 250ms ease, transform 250ms ease;
+    }
+
+    .info--image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 340%;
+        height: 340%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 550ms ease;
+      }
+    }
+  }
+
+  &:hover {
+    .card--info {
+      --size: 110px;
+      &::after {
+        opacity: 1;
+      }
+      &.info--1 {
+        right: -5%;
+        transition-delay: 100ms;
+      }
+      &.info--2 {
+        right: 70%;
+      }
+      .info--image {
+        img {
+          opacity: 1;
+          transform: scale(1.5);
+        }
+      }
+      .info--text {
+        transition-delay: 550ms;
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+  }
+}
