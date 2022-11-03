@@ -13,12 +13,28 @@ body {
   box-sizing: border-box;
   background-color: rgb(88, 88, 88);
   font-family: 'Nunito', sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: $c-1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $c-2;
+  border-radius: 5px;
+  border: 1px solid $c-2-transparent;
 }
 
 header {
-  border-bottom: 1rem solid black;
-
   .navbar {
+    width: 100%;
     background-color: #fbfbfb;
     box-shadow: 0 2px 10px #0000001a;
 
@@ -28,6 +44,7 @@ header {
     align-items: center;
 
     &-left {
+      padding-left: 2vw;
       img {
         width: $navbar-height;
         height: $navbar-height;
@@ -35,17 +52,15 @@ header {
     }
 
     &-right {
+      padding-right: 2vw;
       display: flex;
       align-items: center;
-
-      padding-right: 10px;
 
       img {
         width: 30px;
         height: 30px;
         padding: 0.5rem;
         margin-left: 5px;
-        border: 1px solid black;
         border-radius: 10%;
       }
     }
@@ -56,107 +71,205 @@ header {
     justify-content: center;
     align-items: center;
 
-    height: 75vh;
+    height: 90vh;
+    box-shadow: 0px 7px 15px 5px #cbc3c1;
 
     .background {
+      width: 100vw;
+      height: 90vh;
       position: absolute;
-      width: auto;
-      height: 100%;
       z-index: -1;
+      object-fit: none;
+      object-position: 50% 65%;
     }
 
-    h1 {
-      align-self: flex-start;
-      margin-top: 5rem;
-      font-size: 5rem;
-      font-weight: bold;
-      text-decoration: underline;
-      color: #fbfbfb;
-      text-shadow: 1px 1px 2px black;
+    &__title {
+      display: flex;
+      flex-direction: column;
+
+      position: absolute;
+      top: $navbar-height;
+      margin-top: 3rem;
+
+      text-align: center;
+
+      h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        text-decoration: underline;
+        color: #fbfbfb;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #fbfbfb;
+        text-shadow: 0px 1px 1px black;
+      }
     }
   }
 }
 
 main {
   section {
-    background: rgb(246, 116, 60);
-    background: linear-gradient(45deg, rgba(246, 116, 60, 0.835171568627451) 0%, rgba(254, 215, 102, 1) 100%);
+    background: rgb(251, 251, 251);
+    background: linear-gradient(0deg, rgba(251, 251, 251, 1) 84%, rgba(200, 192, 190, 1) 100%);
 
-    border-bottom: 1rem solid black;
+    margin-top: -4.5rem;
+    .list {
+      padding: 3rem 0;
 
-    article {
-      display: flex;
-      flex-direction: column;
+      &__content {
+        margin-bottom: 6rem;
+        &__title {
+          display: flex;
+          margin-bottom: 2rem;
 
-      padding-top: 2rem;
+          svg {
+            width: 50px;
+          }
 
-      img {
-        width: 100vw;
-        height: auto;
-      }
+          &__text {
+            text-align: left;
 
-      .content-right {
-        align-self: flex-end;
-        text-align: end;
+            h3 {
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+              margin-left: 1rem;
+            }
 
-        h2 {
-          font-size: 2rem;
-          padding-bottom: 1rem;
+            span {
+              font-style: italic;
+              font-size: bold;
+              font-size: 1.1rem;
+              color: black;
+              background-color: #fed766;
+              border-radius: 2rem;
+              padding: 5px 15px;
+              margin-left: 0.5rem;
+            }
+          }
         }
       }
 
-      .content {
-        h2 {
-          font-size: 2rem;
-          padding-bottom: 1rem;
+      &__right-content {
+        margin-bottom: 6rem;
+        text-align: right;
+        &__title {
+          text-align: right;
+
+          display: flex;
+          flex-direction: row-reverse;
+          margin-bottom: 2rem;
+
+          svg {
+            width: 50px;
+          }
+
+          &__text {
+            h3 {
+              margin-right: 1rem;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+            }
+
+            span {
+              font-style: italic;
+              font-size: bold;
+              font-size: 1.1rem;
+              color: black;
+
+              border-radius: 2rem;
+              padding: 5px 15px;
+              margin-right: 0.5rem;
+            }
+          }
         }
       }
+    }
+  }
 
-      .content-presentation {
-        margin-top: 2rem;
-        border-top: 1px solid black;
+  .bms-presentation {
+    background-color: $c-4;
+    margin-top: -60px;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+    box-shadow: 0px -9px 5px 0px #94381e inset;
 
-        h2 {
-          font-size: 2rem;
-          font-weight: 600;
-          padding: 2rem 0 1rem 0;
-        }
+    h3 {
+      margin-right: 1rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
 
-        span {
-          margin-top: 2rem;
-          font-style: italic;
-        }
+    span {
+      font-style: italic;
+      font-size: bold;
+      font-size: 1.1rem;
+    }
 
-        p {
-          padding: 2rem 0;
-        }
-      }
+    p {
+      margin: 2rem 0;
     }
   }
 }
 
 footer {
-  background: $c-1;
+  background-color: #fbfbfb;
+  box-shadow: 0px 17px 9px -px rgba(0, 0, 0, 0.75) inset;
 
   section {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
-    ul {
+    text-align: center;
+
+    img {
+      align-self: center;
+      width: 150px;
+      height: auto;
+    }
+
+    .public-list {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
 
-      span {
+      a {
+        color: white;
         background-color: $c-2;
         border-radius: 5px;
         text-align: center;
         font-size: 15px;
         padding: 1rem 0.5rem 1rem 0.5rem;
-        margin: 0.5rem 0;
+        margin: 1rem 2rem;
+      }
+    }
+
+    .tech-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 1rem;
+
+      a {
+        color: white;
+        width: 150px;
+        background-color: $c-1;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 15px;
+        padding: 15px 10px;
       }
     }
 
@@ -171,10 +284,82 @@ footer {
   padding-right: 1rem;
 }
 
-//Test
+.util-bold {
+  font-weight: bold;
+}
+
+.util-c1 {
+  fill: $c-1;
+}
+
+.util-c2 {
+  fill: $c-2;
+}
+.util-c3 {
+  fill: $c-3;
+}
+.util-c4 {
+  fill: $c-4;
+}
+.util-c5 {
+  fill: $c-5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+// Wave from shapedivider.app
+.custom-shape-divider-top-1667476280 {
+  position: relative;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 60px;
+  }
+
+  .shape-fill {
+    fill: #fbfbfb;
+  }
+}
+
+// Triangle from shapedivider.app
+.custom-shape-divider-top-1667477046 {
+  position: relative;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+  }
+
+  .shape-fill {
+    fill: $c-4;
+  }
+}
+
+//------------//
+// Additional
+//------------//
+
 .card {
-  position: absolute;
-  width: 80vw;
+  position: relative;
+  margin-top: 2rem;
+  width: 100vw;
   height: 350px;
 
   &--image {
@@ -310,6 +495,34 @@ footer {
         opacity: 1;
         transform: translateY(0%);
       }
+    }
+  }
+}
+
+//-----------
+// RESPONSIVE DESKTOP
+//-----------
+
+@media (min-width: 1250px) {
+  .util-mx {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  .navbar {
+    .navbar-left,
+    .navbar-right {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+  }
+
+  header .content {
+    height: 100vh;
+    .background {
+      width: 100%;
+      height: 100%;
+      object-fit: fill !important;
     }
   }
 }
