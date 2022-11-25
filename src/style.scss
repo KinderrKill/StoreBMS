@@ -122,9 +122,11 @@ header {
 
       .main-img {
         width: 350px;
+        padding: 0 5rem;
       }
 
       .frame {
+        position: relative;
         display: none;
         width: 200px;
         height: 200px;
@@ -141,16 +143,18 @@ header {
         }
 
         span {
-          position: relative;
+          position: absolute;
           text-align: center;
-          bottom: 35px;
+          bottom: 15px;
           left: 35px;
-          color: $c-1;
+          color: white;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.685);
           font-weight: bold;
         }
       }
 
       .frame-2 {
+        position: relative;
         width: 200px;
         height: 200px;
         display: none;
@@ -167,13 +171,21 @@ header {
         }
 
         span {
-          position: relative;
+          position: absolute;
           text-align: center;
-          bottom: 35px;
+          bottom: 15px;
           left: 25px;
-          color: $c-1;
+          color: white;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.685);
           font-weight: bold;
         }
+      }
+
+      h3 {
+        padding-top: 2rem;
+        font-size: 1.6rem;
+        color: #fbfbfb;
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.685);
       }
     }
   }
@@ -425,6 +437,7 @@ a {
     opacity: 1;
   }
 }
+
 //-----------
 // RESPONSIVE DESKTOP
 //-----------
@@ -481,8 +494,16 @@ a {
     }
 
     &__img {
+      display: flex;
+      flex-direction: row;
+
       .main-img {
         width: 400px;
+      }
+
+      .frame,
+      .frame-2 {
+        display: flex;
       }
     }
   }
