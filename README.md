@@ -1,6 +1,6 @@
-# Store-BMS
+# (Archive) Store-BMS
 
-Réalisé en 2022.
+Réalisé en 2022, le site n'est plus actif à ce jour.
 
 Ce projet est un site vitrine réalisé en HTML et CSS, conçu pour présenter et promouvoir un produit disponible sur Amazon. Il dispose d'un design responsive adapté aux ordinateurs de bureau et aux appareils mobiles.
 
@@ -16,7 +16,7 @@ Ce projet est un site vitrine réalisé en HTML et CSS, conçu pour présenter e
 
 ## Auteur
 
-Ce projet a été réalisé par [E-Code]([lien_vers_votre_profil_github](https://github.com/KinderrKill)).
+Ce projet a été réalisé par [E-Code](https://github.com/KinderrKill).
 
 ## Remarques
 
